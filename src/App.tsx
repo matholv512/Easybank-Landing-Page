@@ -1,8 +1,11 @@
+import { Layout } from './layout/layout'
+import { Home } from './pages/home'
+
 function App() {
   return (
-    <div>
-      <h1 className="text-6xl text-red-400">hello world</h1>
-    </div>
+    <Layout>
+      <Home />
+    </Layout>
   )
 }
 
