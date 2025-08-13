@@ -1,7 +1,19 @@
+import { useState } from 'react'
+import { HEADER } from './constants'
+import { twMerge } from 'tailwind-merge'
+import { MobileContainer } from './mobile/mobile-container'
+import { MobileNav } from './mobile/mobile-nav'
+
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
-    <header>
-      <nav>nav menu</nav>
+    <header
+      className={twMerge('sticky top-0 bg-white', Object.values(HEADER.height))}
+    >
+      <MobileContainer open={isMenuOpen} setOpen={setIsMenuOpen} />
+
+      <MobileNav open={isMenuOpen} />
     </header>
   )
 }

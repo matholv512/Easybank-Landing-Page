@@ -22,4 +22,11 @@
   --container-px-md: 4rem;
   --container-px-lg: 6rem;
   --container-px-xl: 10.3rem;
+
+  /* Header config*/
+  --header-h-base: 4.1rem;
+  --header-h-sm: 4.3rem;
+  --header-h-md: 4.6rem;
+  --header-h-lg: 4.9rem;
+  --header-h-xl: 5.1rem;
 }
