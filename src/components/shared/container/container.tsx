@@ -1,6 +1,6 @@
 import type { ComponentProps, ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { CONTAINER_PADDING } from './constants'
+import { CONTAINER } from './constants'
 
 interface ContainerProps extends ComponentProps<'div'> {
   children: ReactNode
@@ -11,7 +11,7 @@ interface ContainerProps extends ComponentProps<'div'> {
 export function Container({
   children,
   className,
-  padding = `${CONTAINER_PADDING.base} ${CONTAINER_PADDING.md} ${CONTAINER_PADDING.lg} ${CONTAINER_PADDING.xl}`,
+  padding = twMerge(Object.values(CONTAINER.px)),
   ...rest
 }: ContainerProps) {
   return (
