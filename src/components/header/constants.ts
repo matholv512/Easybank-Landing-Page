@@ -18,7 +18,7 @@ export const MOBILE_NAV = {
   },
 } as const
 
-export const MenuLinks: { href: string; label: string }[] = [
+export const MENU_LINKS: { href: string; label: string }[] = [
   { href: '/', label: 'Home' },
   { href: '#', label: 'About' },
   { href: '#', label: 'Contact' },

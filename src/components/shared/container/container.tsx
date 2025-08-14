@@ -11,7 +11,7 @@ interface ContainerProps extends ComponentProps<'div'> {
 export function Container({
   children,
   className,
-  padding = twMerge(Object.values(CONTAINER.px)),
+  padding = twMerge(...Object.values(CONTAINER.px)),
   ...rest
 }: ContainerProps) {
   return (
