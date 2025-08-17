@@ -1,6 +1,6 @@
 import { icons } from '../../../assets'
 import { Container } from '../../shared/container/container'
-import { LogoLink } from '../logo-link'
+import { LogoLink } from '../../shared/logo/logo-link'
 
 interface MobileContainerProps {
   open: boolean
@@ -10,7 +10,7 @@ interface MobileContainerProps {
 export function MobileContainer({ open, setOpen }: MobileContainerProps) {
   return (
     <Container className="flex items-center justify-between size-full md:hidden">
-      <LogoLink />
+      <LogoLink variant="default" />
 
       <button
         onClick={() => setOpen((prev) => !prev)}
