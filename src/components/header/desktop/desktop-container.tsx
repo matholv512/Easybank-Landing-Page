@@ -5,7 +5,7 @@ import { DesktopNav } from './desktop-nav'
 
 export function DesktopContainer() {
   return (
-    <Container className="items-center justify-between hidden md:flex size-full">
+    <Container className="items-center justify-between hidden md:flex size-full max-w-[1920px]">
       <LogoLink variant="default" />
 
       <DesktopNav />

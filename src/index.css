@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 @import "tailwindcss";
 
-
 @theme {
+  /* Custom Breakpoints */
+  --breakpoint-xxl: 140rem;
+
   /* Primary Colors */
   --color-primary-dark-blue: hsl(233, 26%, 24%);
   --color-primary-lime-green: hsl(136, 65%, 51%);
@@ -24,7 +26,7 @@
   --container-px-xl: 10.3rem;
 
   /* Header config*/
-  --header-h-base: 4.1rem;
+  --header-h-base: 4rem;
   --header-h-sm: 4.3rem;
   --header-h-md: 4.6rem;
   --header-h-lg: 4.9rem;

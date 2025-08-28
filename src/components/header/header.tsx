@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header
       className={twMerge(
-        'sticky top-0 bg-white',
+        'sticky top-0 bg-white z-50',
         ...Object.values(HEADER.height),
       )}
     >

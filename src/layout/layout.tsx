@@ -4,9 +4,9 @@ import { Footer } from '../components/footer/footer'
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col min-h-screen font-sans">
+    <div className="relative flex flex-col w-screen max-w-full overflow-hidden font-sans">
       <Header />
-      <main>{children}</main>
+      <main className="flex-1 max-w-[1920px] m-auto">{children}</main>
       <Footer />
     </div>
   )
