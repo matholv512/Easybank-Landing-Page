@@ -1,21 +1,32 @@
+import { useInView } from '../../hooks/use-in-view'
 import { Container } from '../shared/container/container'
 import { ARTICLES_ITEMS } from './constants'
 
 export function Articles() {
+  const { ref, isVisible } = useInView<HTMLUListElement>()
   return (
     <section className="w-full py-16 bg-neutral-very-light-gray md:py-28">
       <Container>
-        <div className="pb-8 md:pb-10 xl:pb-14">
+        <div
+          className={`pb-8 md:pb-10 xl:pb-14
+            transition-all duration-700
+            ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+        >
           <h2 className="text-[1.9rem] leading-9 text-primary-dark-blue font-thin sm:text-[2rem] xl:text-[2.4rem] text-center md:text-start">
             Latest Articles
           </h2>
         </div>
 
-        <ul className="grid grid-cols-1 gap-y-5 md:gap-9 md:grid-cols-2 lg:grid-cols-4">
+        <ul
+          ref={ref}
+          className="grid grid-cols-1 gap-y-5 md:gap-9 md:grid-cols-2 lg:grid-cols-4"
+        >
           {ARTICLES_ITEMS.map(({ title, author, image, paragraph }) => (
             <li
               key={title}
-              className="max-w-xs m-auto bg-white rounded-md size-full md:m-0 md:max-w-[330px] hover:shadow-lg hover:shadow-neutral-light-grayish-blue"
+              className={`max-w-xs m-auto bg-white rounded-md size-full md:m-0 md:max-w-[330px] hover:shadow-lg hover:shadow-neutral-light-grayish-blue
+                transition-all duration-700
+                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             >
               <a href="#">
                 <img
